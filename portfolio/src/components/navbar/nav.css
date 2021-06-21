@@ -1,0 +1,55 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.navbar:before {
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+.navbar:after {
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
+}
+
+.navbar .logoLink .logo {
+  margin-left: 2%;
+  margin-top: 1%;
+  width: 15%;
+}
+
+.navbar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 2%;
+}
+
+.navbar div .toggle-container {
+  margin-top: 15%;
+  margin-right: 15%;
+}
+
+.navbar div Button .hamburger {
+  font-size: 40px;
+}
+/*# sourceMappingURL=nav.css.map */

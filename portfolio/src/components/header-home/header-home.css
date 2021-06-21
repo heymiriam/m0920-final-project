@@ -1,0 +1,28 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .header-cont {
+  width: 70%;
+  margin: 10% 0;
+}
+
+.header .header-cont h1 {
+  font-size: 64px;
+}
+
+.header .header-cont h2 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 500;
+}
+/*# sourceMappingURL=header-home.css.map */

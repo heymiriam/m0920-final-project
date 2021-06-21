@@ -1,0 +1,53 @@
+.navbar{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    position:fixed;
+    
+    width:100%;
+    background-color:rgba(255, 255, 255, 0.95);
+&:before{
+    
+    transition: all 0.15s linear;
+    //box-shadow:2px 2px 5px rgba(0, 0, 0, 0.363) ;
+}
+    &:after {
+        box-shadow:2px 2px 5px rgba(0, 0, 0, 0.363);
+        //box-shadow: 0 0 10px rgba(0,0,0,0.4);   
+   }
+  
+   
+    .logoLink{
+        
+        .logo{
+            margin-left:2%; 
+            margin-top:1%;   
+            width:15%;
+            }
+    }
+    
+    div{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-right:2%;
+    .toggle-container{
+        margin-top:15%;
+        margin-right:15%;
+        
+        
+       
+    }
+    
+    Button{
+        
+        .hamburger{
+            font-size:40px;
+        }
+    }
+   
+      
+    
+    }
+
+}

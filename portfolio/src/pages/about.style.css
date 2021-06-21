@@ -1,0 +1,44 @@
+.aboutCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 150px;
+}
+
+.aboutCont .textCont {
+  width: 50%;
+  padding: 0 40px;
+}
+
+.aboutCont .textCont .aboutHeading {
+  font-size: 64px;
+}
+
+.aboutCont .textCont .text {
+  font-size: 24px;
+}
+
+.aboutCont .textCont .resumeBtn {
+  width: 30%;
+  margin-top: 20px;
+  padding: 20px 50px;
+}
+
+.aboutCont .imgCont {
+  width: 50%;
+}
+
+.aboutCont .imgCont img {
+  width: 100%;
+}
+/*# sourceMappingURL=about.style.css.map */

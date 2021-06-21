@@ -1,0 +1,31 @@
+.aboutCont{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    padding-top:150px;
+    .textCont{
+        width:50%;
+        padding:0 40px;
+        .aboutHeading{
+            font-size:64px;
+        }
+        .text{
+            
+            font-size:24px;
+        } 
+       
+            .resumeBtn{
+                width:30%;
+                margin-top:20px;
+                padding:20px 50px;
+        }
+       
+    }
+    .imgCont {
+        width:50%;
+        img{width:100%;}
+        
+    }
+    
+}

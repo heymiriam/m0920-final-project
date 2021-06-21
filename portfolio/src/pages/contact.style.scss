@@ -1,0 +1,35 @@
+.contactCont{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    height:600px;
+    //margin:40px;
+    padding-top:150px;
+    .textCont{
+        width:50%;
+        padding:0 40px;
+        .contactHeading{
+            font-size:80px;
+
+        }
+
+        .text{
+            
+            font-size:24px;
+        } 
+    }
+    .formCont{
+        width:70%;
+        .textareaCont{
+            width:100%;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            height:150px;
+            .textarea{
+                width:95%;
+               font-size:18px;
+            }
+        }
+    }
+}
