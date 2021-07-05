@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --color-grey:#e5e5e5;
+  --color-bg:black;
+  --color-greyLight:#e5e5e5a8;
+}
+
+* {
+  font-family: 'Roboto';
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+i {
+  font-style: normal;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  background-color: #292929;
+}
+
+.nav-bar .burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 22px;
+  margin-right: 0px;
+  width: 46px;
+}
+
+.nav-bar .burger a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-bar .burger a svg {
+  fill: white;
+}
+
+.nav-bar .mainBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 0px 0px 0px;
+  margin-left: 25px;
+  height: 70px;
+  width: 100%;
+  border-bottom: 0.5px solid #e5e5e548;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #292929;
+  top: 0;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
+}
+
+.nav-bar .mainBar i {
+  padding: 0 7.5px;
+}
+
+.nav-bar .mainBar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.nav-bar .mainBar .logo img {
+  width: 125px;
+  padding: 18px 16px 18px 0px;
+}
+
+.nav-bar .mainBar .searchbar {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar .mainBar .searchbar form {
+  border: 1px solid #303030;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.nav-bar .mainBar .searchbar input, .nav-bar .mainBar .searchbar button {
+  border-radius: 0;
+  border: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar .mainBar .searchbar input {
+  background-color: black;
+  font-weight: 400;
+  line-height: 24px;
+  margin-left: 4px;
+  max-width: 100%;
+  margin: 0;
+  cursor: text;
+  font: 300 20px Arial;
+  padding: 4px 15px;
+  border-width: 0px;
+  border-style: inset;
+  border-color: -internal-light-dark(#767676, #858585);
+  width: 750px;
+}
+
+.nav-bar .mainBar .searchbar button {
+  margin-top: 0px;
+  height: 36.9px;
+  width: 70px;
+  background-color: #303030;
+}
+
+.nav-bar .mainBar .searchbar button yt-icon svg {
+  padding: 0px 23px;
+  fill: #ffffff80;
+}
+
+.nav-bar .mainBar .searchbar .voice-button {
+  background-color: transparent;
+  width: 75px;
+}
+
+.nav-bar .mainBar .searchbar .voice-button yt-icon {
+  width: 50%;
+}
+
+.nav-bar .mainBar .searchbar .voice-button yt-icon svg {
+  fill: white;
+}
+
+.nav-bar .mainBar .iconsRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 24px;
+  height: 100%;
+}
+
+.nav-bar .mainBar .iconsRight .profile-button img {
+  border-radius: 50%;
+}
+
+.nav-bar .mainBar .iconsRight .create-button, .nav-bar .mainBar .iconsRight .apps-button, .nav-bar .mainBar .iconsRight .notifications-button, .nav-bar .mainBar .iconsRight .profile-button {
+  background-color: #292929;
+  width: 45px;
+  margin: 0px 9px;
+  border: none;
+}
+
+.nav-bar .mainBar .iconsRight .create-button yt-icon, .nav-bar .mainBar .iconsRight .apps-button yt-icon, .nav-bar .mainBar .iconsRight .notifications-button yt-icon, .nav-bar .mainBar .iconsRight .profile-button yt-icon {
+  width: 50%;
+}
+
+.nav-bar .mainBar .iconsRight .create-button yt-icon svg, .nav-bar .mainBar .iconsRight .apps-button yt-icon svg, .nav-bar .mainBar .iconsRight .notifications-button yt-icon svg, .nav-bar .mainBar .iconsRight .profile-button yt-icon svg {
+  fill: white;
+}
+
+.mainSection {
+  height: calc(100vh-70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.lateralMenu {
+  background-color: #292929;
+  width: 0;
+  height: 100%;
+  color: white;
+  overflow-y: scroll;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.lateralMenu .lat-logo {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  border-bottom: 0.5px solid #e5e5e548;
+}
+
+.lateralMenu .lat-logo div {
+  width: 45px;
+}
+
+.lateralMenu .lat-logo div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.lateralMenu .lat-logo div a svg {
+  fill: white;
+}
+
+.lateralMenu .lat-logo img {
+  width: 141px;
+  margin-left: 9px;
+  padding: 22px 14px 18px 16px;
+}
+
+.lateralMenu .subscriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 0px;
+  padding-left: 22px;
+}
+
+.lateralMenu .subscriptions h3 {
+  font-size: 16px;
+  margin: 0 25px 10px;
+}
+
+.lateralMenu .subscriptions .category {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12.5px 25px;
+}
+
+.lateralMenu .subscriptions .category:hover {
+  background-color: var(--color-greyLight);
+}
+
+.lateralMenu .subscriptions .category i {
+  margin-right: 25px;
+}
+
+.lateralMenu .first-cat {
+  margin-top: 80px;
+}
+
+.lateralMenu .categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 0.25px solid var(--color-greyLight);
+  padding: 15px 0px 15px 20px;
+}
+
+.lateralMenu .categories .category {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12.5px 25px;
+}
+
+.lateralMenu .categories .category:hover {
+  background-color: var(--color-greyLight);
+}
+
+.lateralMenu .categories .category i {
+  margin-right: 25px;
+}
+
+.lateralMenu .lat-logo {
+  position: fixed;
+  background-color: #292929;
+  width: 270px;
+  margin-right: 0px;
+}
+
+#items {
+  width: 100px;
+  background-color: #292929;
+  height: 100vh;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  font-size: 12px;
+  text-align: center;
+}
+
+#items .home {
+  width: 28px;
+  margin-top: 15px;
+}
+
+#items .home yt-icon {
+  fill: white;
+}
+
+#items .home .title {
+  color: white;
+}
+
+#items .home span {
+  margin-top: 0px;
+}
+
+#items ytd-mini-guide-entry-renderer {
+  margin-bottom: 40px;
+  width: 30px;
+  height: 50px;
+}
+
+#items ytd-mini-guide-entry-renderer yt-icon {
+  fill: #909090;
+}
+
+#items ytd-mini-guide-entry-renderer span {
+  text-decoration: none;
+}
+
+#items ytd-mini-guide-entry-renderer span:hover, #items ytd-mini-guide-entry-renderer span:focus, #items ytd-mini-guide-entry-renderer span:visited, #items ytd-mini-guide-entry-renderer span:active {
+  text-decoration: none;
+}
+
+#items ytd-mini-guide-entry-renderer .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #909090;
+  text-align: center;
+}
+
+.videos {
+  background: black;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.videos #scroll-container {
+  color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  background-color: #292929;
+  height: 80px;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.videos #scroll-container iron-selector {
+  margin-left: 28px;
+}
+
+.videos #scroll-container iron-selector yt-chip-cloud-chip-renderer {
+  margin-right: 5px;
+  border: 1px solid #4b4b4b;
+  padding: 12px 4px;
+  background-color: #373737;
+  border-radius: 40px;
+}
+
+.videos #scroll-container iron-selector yt-chip-cloud-chip-renderer yt-formatted-string {
+  padding: 5px 10px;
+}
+
+.videos .videoGrid {
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.videos .videoGrid .video {
+  width: 23%;
+  margin-bottom: 40px;
+}
+
+.videos .videoGrid .video .thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.videos .videoGrid .video .thumbnail img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.videos .videoGrid .video .author {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.videos .videoGrid .video .author img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.videos .videoGrid .video .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  padding-top: 10px;
+}
+
+.videos .videoGrid .video .details .headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.videos .videoGrid .video .details .headings h3 {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.videos .videoGrid .video .details .headings a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.videos .videoGrid .video .details .headings a, .videos .videoGrid .video .details .headings span {
+  font-size: 14px;
+  margin-top: 5px;
+}
+/*# sourceMappingURL=main.css.map */

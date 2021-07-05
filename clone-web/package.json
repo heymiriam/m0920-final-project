@@ -1,0 +1,14 @@
+{
+  "name": "clone-web",
+  "version": "1.0.0",
+  "description": "clone web",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss sass/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

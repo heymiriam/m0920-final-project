@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Youtube Clone Website">
+    <meta name="keywords" content="clone, web, Youtube, responsive, HTML, CSS, JavaScript">
+    <meta name="author" content="Miriam Bellon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yotube</title>
+    <link rel="stylesheet" href="sass/main.css" />
+  </head>
+  <body class="body">
+    <div class="nav-bar">
+        <div class="burger" >
+        <a href="#"  onclick="openNav()" >
+          <svg id="guide-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 80px; height: 80px;"><g class="style-scope yt-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady-->
+
+      <!--<i onclick="openNav()">m</i>-->
+        </a>
+      </div>
+    <div class="mainBar">
+
+    
+      <div class="logo">
+         
+        <img src="./assets/yt_logo_rgb_dark.png" alt="Youtube Logo" />
+      </div>
+      <div class="searchbar">
+        <div class="bar">
+            
+          <form>
+
+            <input id="search" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="text" spellcheck="false" placeholder="Search" aria-label="Search" aria-haspopup="false" role="combobox" aria-autocomplete="list" dir="ltr" class="ytd-searchbox" style="outline: none;">
+
+            <button>
+                    <yt-icon class="style-scope ytd-searchbox"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>   
+             </button>
+
+            
+          </form>
+        </div>
+        
+        
+        <button id="button" class="style-scope voice-button yt-icon-button" aria-label="Voice Search">
+            <yt-icon class="style-scope ytd-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+        </button>
+
+      </div>
+      <div class="iconsRight">
+        <button id="button" class="create-button style-scope yt-icon-button" aria-label="Create">
+            <yt-icon class="style-scope ytd-topbar-menu-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+        </button>
+        
+        <button id="button" class="apps-button style-scope yt-icon-button" aria-label="YouTube Apps">
+            <yt-icon class="style-scope ytd-topbar-menu-button-renderer">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady-->
+            </yt-icon>
+        </button>
+
+        <button id="button" class="notifications-button style-scope yt-icon-button" aria-label="Notifications">
+            <yt-icon class="style-scope ytd-notification-topbar-button-renderer">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady-->
+            </yt-icon>
+        </button>
+        
+        <button id="avatar-btn" aria-haspopup="true" class="profile-button style-scope ytd-topbar-menu-button-renderer" aria-label="Profile picture account which opens an alternative account list">
+            <yt-img-shadow height="32" width="32" class="style-scope ytd-topbar-menu-button-renderer no-transition" style="background-color: transparent;" loaded=""><!--css-build:shady-->
+                <img id="img" class="style-scope yt-img-shadow" alt="Imagen del avatar" height="40" width="40" src="https://yt3.ggpht.com/yti/ANoDKi6DXiHonaCYRgbj70yWvWS50fpO_74vEYn_7A=s88-c-k-c0x00ffffff-no-rj-mo">
+            </yt-img-shadow>
+          </button>
+      </div>
+    </div>
+</div>
+
+      
+        <div class="mainSection">
+
+
+        <div class="lateralMenu sidenav" id="mySidenav" >
+            <div class="logo lat-logo">
+                <div>
+                <a href="javascript:void(0)"  class="closebtn" onclick="closeNav()">
+                  <svg id="guide-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 80px; height: 80px;"><g class="style-scope yt-icon"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady-->
+      
+              <!--<i onclick="openNav()">m</i>-->
+                </a>
+                </div>
+              <img src="./assets/yt_logo_rgb_dark.png" alt="Youtube Logo" />
+            </div>
+            
+          <div class="first-cat categories">
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>Home</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>Explore</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>Subscriptions</span>
+            </span>
+          </div>
+
+          <div class="categories">
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>Library</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>History</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>Your Videos</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>Watch Later</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>Liked videos</span>
+            </span>
+          </div>
+
+          <div class="subscriptions">
+            <h3>SUBSCRIPTIONS</h3>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+            <span class="category">
+              <i class="icon"> h </i>
+              <span>name</span>
+            </span>
+          </div>
+
+        </div>
+        
+        
+
+
+
+
+
+
+
+        <div id="items" class="style-scope ytd-mini-guide-renderer">
+            <ytd-mini-guide-entry-renderer class="style-scope ytd-mini-guide-renderer home" aria-selected="true" role="tab" tabindex="0" active="" aria-label="Home"><!--css-build:shady-->
+                <a id="endpoint" tabindex="-1" class="yt-simple-endpoint style-scope ytd-mini-guide-entry-renderer" title="Home" href="/">
+            <yt-icon id="icon" class="guide-icon style-scope ytd-mini-guide-entry-renderer">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                    <g class="style-scope yt-icon">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8" class="style-scope yt-icon">
+                        </path>
+                    </g>
+                </svg><!--css-build:shady-->
+            </yt-icon>
+            <span class="title style-scope ytd-mini-guide-entry-renderer">Home</span>
+            <tp-yt-paper-tooltip animation-delay="0" offset="4" position="right" class="style-scope ytd-mini-guide-entry-renderer" role="tooltip" tabindex="-1" hidden="" style="--paper-tooltip-delay-in:0ms;"><!--css-build:shady--><div id="tooltip" class="style-scope tp-yt-paper-tooltip hidden">
+            
+              Home
+            
+          </div>
+          </tp-yt-paper-tooltip>
+            <yt-interaction class="style-scope ytd-mini-guide-entry-renderer"><!--css-build:shady--><div class="stroke style-scope yt-interaction"></div><div class="fill style-scope yt-interaction"></div></yt-interaction>
+          </a>
+          </ytd-mini-guide-entry-renderer><ytd-mini-guide-entry-renderer class="style-scope ytd-mini-guide-renderer" aria-selected="false" role="tab" tabindex="0" aria-label="Explore"><!--css-build:shady--><a id="endpoint" tabindex="-1" class="yt-simple-endpoint style-scope ytd-mini-guide-entry-renderer" title="Explore" href="/feed/explore">
+            <yt-icon id="icon" class="guide-icon style-scope ytd-mini-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M11.23 13.08c-.29-.21-.48-.51-.54-.86-.06-.35.02-.71.23-.99.21-.29.51-.48.86-.54.35-.06.7.02.99.23.29.21.48.51.54.86.06.35-.02.71-.23.99a1.327 1.327 0 01-1.08.56c-.28 0-.55-.08-.77-.25zM22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10zm-3.97-6.03L9.8 9.8l-3.83 8.23 8.23-3.83 3.83-8.23z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+            <span class="title style-scope ytd-mini-guide-entry-renderer">Explore</span>
+            <tp-yt-paper-tooltip animation-delay="0" offset="4" position="right" class="style-scope ytd-mini-guide-entry-renderer" role="tooltip" tabindex="-1" hidden="" style="--paper-tooltip-delay-in:0ms;"><!--css-build:shady--><div id="tooltip" class="style-scope tp-yt-paper-tooltip hidden">
+            
+              Explore
+            
+          </div>
+          </tp-yt-paper-tooltip>
+            <yt-interaction class="style-scope ytd-mini-guide-entry-renderer"><!--css-build:shady--><div class="stroke style-scope yt-interaction"></div><div class="fill style-scope yt-interaction"></div></yt-interaction>
+          </a>
+          </ytd-mini-guide-entry-renderer><ytd-mini-guide-entry-renderer class="style-scope ytd-mini-guide-renderer" aria-selected="false" role="tab" tabindex="0" aria-label="Subscriptions"><!--css-build:shady--><a id="endpoint" tabindex="-1" class="yt-simple-endpoint style-scope ytd-mini-guide-entry-renderer" title="Subscriptions" href="/feed/subscriptions">
+            <yt-icon id="icon" class="guide-icon style-scope ytd-mini-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+            <span class="title style-scope ytd-mini-guide-entry-renderer">Subscriptions</span>
+            <tp-yt-paper-tooltip animation-delay="0" offset="4" position="right" class="style-scope ytd-mini-guide-entry-renderer" role="tooltip" tabindex="-1" hidden="" style="--paper-tooltip-delay-in:0ms;"><!--css-build:shady--><div id="tooltip" class="style-scope tp-yt-paper-tooltip hidden">
+            
+              Subscriptions
+            
+          </div>
+          </tp-yt-paper-tooltip>
+            <yt-interaction class="style-scope ytd-mini-guide-entry-renderer"><!--css-build:shady--><div class="stroke style-scope yt-interaction"></div><div class="fill style-scope yt-interaction"></div></yt-interaction>
+          </a>
+          </ytd-mini-guide-entry-renderer><ytd-mini-guide-entry-renderer class="style-scope ytd-mini-guide-renderer" aria-selected="false" role="tab" tabindex="0" aria-label="Library"><!--css-build:shady--><a id="endpoint" tabindex="-1" class="yt-simple-endpoint style-scope ytd-mini-guide-entry-renderer" title="Library" href="/feed/library">
+            <yt-icon id="icon" class="guide-icon style-scope ytd-mini-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill="none" d="M0 0h24v24H0z" class="style-scope yt-icon"></path><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+            <span class="title style-scope ytd-mini-guide-entry-renderer">Library</span>
+            <tp-yt-paper-tooltip animation-delay="0" offset="4" position="right" class="style-scope ytd-mini-guide-entry-renderer" role="tooltip" tabindex="-1" hidden="" style="--paper-tooltip-delay-in:0ms;"><!--css-build:shady--><div id="tooltip" class="hidden style-scope tp-yt-paper-tooltip">
+            
+              Library
+            
+          </div>
+          </tp-yt-paper-tooltip>
+            <yt-interaction class="style-scope ytd-mini-guide-entry-renderer"><!--css-build:shady--><div class="stroke style-scope yt-interaction"></div><div class="fill style-scope yt-interaction"></div></yt-interaction>
+          </a>
+          </ytd-mini-guide-entry-renderer></div>
+      
+      <div class="videos">
+        <div id="scroll-container" class="style-scope ytd-feed-filter-chip-bar-renderer">
+            <iron-selector id="chips" activate-event="" role="tablist" selected-attribute="selected" class="style-scope ytd-feed-filter-chip-bar-renderer" style="transform: translateX(0px);">
+            <yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer iron-selected" role="tab" tabindex="0" aria-selected="true" chip-style="STYLE_HOME_FILTER" selected=""><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Todo">Todo</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Entrenamientos de intervalos de alta intensidad">Entrenamientos de intervalos de alta intensidad</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="CrossFit">CrossFit</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Coreografía">Coreografía</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Hojas de estilos en cascada">Hojas de estilos en cascada</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Informática">Informática</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Comedia">Comedia</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Chill out">Chill out</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Películas de comedia">Películas de comedia</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="En directo">En directo</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Música">Música</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Bazzi">Bazzi</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Banda sonora">Banda sonora</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Alimentación">Alimentación</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Mixes">Mixes</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="NBA">NBA</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Modificaciones de Minecraft">Modificaciones de Minecraft</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Presentaciones">Presentaciones</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Artes visuales">Artes visuales</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Subidas recientes">Subidas recientes</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer><yt-chip-cloud-chip-renderer class="style-scope ytd-feed-filter-chip-bar-renderer" role="tab" tabindex="0" aria-selected="false" chip-style="STYLE_HOME_FILTER"><!--css-build:shady--><yt-formatted-string id="text" ellipsis-truncate="" class="style-scope yt-chip-cloud-chip-renderer" title="Visto">Visto</yt-formatted-string>
+        </yt-chip-cloud-chip-renderer></iron-selector>
+          </div>
+
+
+
+
+        <div class="videoGrid">
+
+
+
+
+
+
+
+
+
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
+                </div>
+                <div class="details">
+                    <div class="author">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>  
+                    </div>
+                    <div class="headings">
+                        <h3>Youtube Video</h3>
+                        <a href="#">Dev</a>
+                        <span>1.6M views · 7 months ago</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
+                </div>
+                <div class="details">
+                    <div class="author">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>  
+                    </div>
+                    <div class="headings">
+                        <h3>Youtube Video</h3>
+                        <a href="#">Dev</a>
+                        <span>1.6M views · 7 months ago</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
+                </div>
+                <div class="details">
+                    <div class="author">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>  
+                    </div>
+                    <div class="headings">
+                        <h3>Youtube Video</h3>
+                        <a href="#">Dev</a>
+                        <span>1.6M views · 7 months ago</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>
+                </div>
+                <div class="details">
+                    <div class="author">
+                    <img src="https://images.unsplash.com/photo-1617507171089-6cb9aa5add36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"/>  
+                    </div>
+                    <div class="headings">
+                        <h3>Youtube Video</h3>
+                        <a href="#">Dev</a>
+                        <span>1.6M views · 7 months ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div> 
+    
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "270px";
+          document.getElementById("mySidenav").style.zIndex = "100";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("mySidenav").style.zIndex = "-100";
+          document.body.style.backgroundColor = "white";
+        }
+        </script>
+  </body>
+</html>
