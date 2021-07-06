@@ -27,6 +27,8 @@ i {
       -ms-flex-align: center;
           align-items: center;
   height: 70px;
+  position: -webkit-sticky;
+  position: sticky;
   background-color: #292929;
 }
 
@@ -54,8 +56,20 @@ i {
   height: 100%;
 }
 
+.nav-bar .burger a:active {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.747);
+}
+
 .nav-bar .burger a svg {
   fill: white;
+}
+
+.nav-bar .burger a svg:active {
+  margin-top: -200px;
 }
 
 .nav-bar .mainBar {
@@ -346,7 +360,6 @@ i {
 #items {
   width: 100px;
   background-color: #292929;
-  height: 100vh;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,8 +374,7 @@ i {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  position: -webkit-sticky;
-  position: sticky;
+  position: none;
   font-size: 12px;
   text-align: center;
 }
@@ -428,8 +440,9 @@ i {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  border-bottom: 0.5px solid #e5e5e548;
   background-color: #292929;
-  height: 80px;
+  height: 75px;
   margin: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,26 +456,37 @@ i {
 }
 
 .videos #scroll-container iron-selector {
-  margin-left: 28px;
+  margin-left: 26px;
 }
 
 .videos #scroll-container iron-selector yt-chip-cloud-chip-renderer {
-  margin-right: 5px;
+  margin-right: 14px;
   border: 1px solid #4b4b4b;
-  padding: 12px 4px;
+  padding: 9px 2px;
   background-color: #373737;
   border-radius: 40px;
 }
 
 .videos #scroll-container iron-selector yt-chip-cloud-chip-renderer yt-formatted-string {
   padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.videos #scroll-container iron-selector .first-all {
+  background-color: #fff;
+  color: #030303;
+  border-color: #fff;
 }
 
 .videos .videoGrid {
-  padding: 15px 25px;
+  padding: 15px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 100vh;
+  overflow: auto;
+  background-color: #181818;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -471,6 +495,9 @@ i {
 }
 
 .videos .videoGrid .video {
+  margin-top: 16px;
+  margin-left: 0px;
+  margin-right: 10px;
   width: 23%;
   margin-bottom: 40px;
 }
@@ -487,10 +514,17 @@ i {
   height: 100%;
 }
 
+.videos .videoGrid .video .thumbnail .cover-bottom {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .videos .videoGrid .video .author {
   height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  width: 50px;
+  border-radius: 100%;
   overflow: hidden;
 }
 
@@ -506,13 +540,15 @@ i {
   display: -ms-flexbox;
   display: flex;
   color: white;
-  padding-top: 10px;
+  margin-top: 20px;
 }
 
 .videos .videoGrid .video .details .headings {
+  margin-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -520,9 +556,8 @@ i {
 }
 
 .videos .videoGrid .video .details .headings h3 {
-  margin-top: 10px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .videos .videoGrid .video .details .headings a {
@@ -531,7 +566,8 @@ i {
 }
 
 .videos .videoGrid .video .details .headings a, .videos .videoGrid .video .details .headings span {
-  font-size: 14px;
+  font-size: 18px;
   margin-top: 5px;
+  color: #909090;
 }
 /*# sourceMappingURL=main.css.map */
