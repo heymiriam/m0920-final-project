@@ -2,7 +2,7 @@
 :root{
     --color-grey:#e5e5e5;
     --color-bg:black;
-    --color-greyLight:#e5e5e5a8;
+    --color-greyLight:#616161dc;
 }
 *{
     font-family: 'Roboto';
@@ -14,7 +14,7 @@
        
     }
    
-        .nav-bar{
+        .nav-bar{ z-index: 10;
             display:flex;
             justify-content: flex-start;
             align-items: center;
@@ -55,7 +55,7 @@
             }
 
         .mainBar{
-        
+           // z-index: 10000000;
             display:flex;
             justify-content: space-between;
             align-items: center;
@@ -67,7 +67,7 @@
             position:sticky;
             background-color:#292929;
             top:0;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
+            //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
             i{
                 padding:0 7.5px;
             }
@@ -120,44 +120,152 @@
                     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
                     width:750px;
                 }
-                button{
+                #search-icon{
                     margin-top:0px;
                     height:36.9px;
                     width:70px;
+                    padding:5px;
                     background-color:#303030;
-                    yt-icon{
-                        
-                        svg{padding:0px 23px;
-                            fill:#ffffff80;
+                    &:hover{
+                        fill:rgba(255, 255, 255, 0.568);  
+                    }
+                    yt-icon{ width:10%;
+                       
+                        a{
+                            width:5px;
                             
-                        
+                            padding:10px;
+                            &:hover{
+                                fill:rgba(255, 255, 255, 0.726);
+                            }
+                        svg{padding:10px 23px;
+                            fill:#6f6f6f;
+                           
+                              
+                       
                         }
-                        
+                    }
                     }
                 }
                 .voice-button{
                     background-color:transparent;
-                    width:75px;
+                    width:60px;
+                    height:30px;
+                    position: relative;
+                    display: inline-block;
+                    
                     yt-icon{
-                        width:50%;
+                        width:20%;
                         svg{
                             fill:white;
+                            width:50%;
                         }
                         
 
                     }
                 }
+                .voice-button .tooltiptext {
+                    visibility: hidden;
+                    width: 170px;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 3px;
+                    padding: 10px 0;
+                    font-size: 15px;
+                    //margin-top:100px;
+                    /* Position the tooltip */
+                    position: absolute;
+                   
+                    top: 200%;
+                    left: 70%;
+                    background-color:#616161dc;
+                    margin-left: -100px;
+                  }
+                  .voice-button:hover .tooltiptext {
+                    visibility: visible;
+                    z-index:100;
+                  }
             
             }
             
             .iconsRight{
+                width:26%;
                 display:flex;
-                padding-right:24px;
+                //margin-top:10px;
+                margin-right:25px;
                 height:100%;
+                .lefticons-button{
+                position: relative;
+                display: inline-block;
+                cursor:pointer;
+                }
                 
+                .create-button .tooltiptext {
+                    
+                    visibility: hidden;
+                    width: 150%;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 3px;
+                    text-align:center;
+                    padding: 10px 0px;
+                    font-size: 15px;
+                    //margin-top:100px;
+                    /* Position the tooltip */
+                    position: absolute;
+                   
+                    top: 120%;
+                    left: 190%;
+                    background-color:#616161dc;
+                    margin-left: -100px;
+                  }
+                  .apps-button .tooltiptext {
+                    visibility: hidden;
+                    width: 250%;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 3px;
+                    text-align:center;
+                    padding: 10px 0px;
+                    font-size: 15px;
+                    //margin-top:100px;
+                    /* Position the tooltip */
+                    position: absolute;
+                   
+                    top: 120%;
+                    left: 140%;
+                    background-color:#616161dc;
+                    margin-left: -100px;
+                  }
+                  .notifications-button .tooltiptext {
+                    visibility: hidden;
+                    width: 250%;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 3px;
+                    text-align:center;
+                    padding: 10px 0px;
+                    font-size: 15px;
+                    //margin-top:100px;
+                    /* Position the tooltip */
+                    position: absolute;
+                   
+                    top: 120%;
+                    left: 140%;
+                    background-color:#616161dc;
+                    margin-left: -100px;
+                  }
+                  .lefticons-button:hover .tooltiptext {
+                    visibility: visible;
+                    z-index:100;
+                  }
                 .profile-button{
                     
-                    img{
+                    img{margin-top:3px;
                         border-radius:50%;
                     }
                     
@@ -207,7 +315,7 @@
     //visibility:hidden;
     overflow-y:scroll;
     position:fixed;
-    z-index:-1;
+    //z-index:100000000;
     top:0;
     left:0;
     overflow-x:hidden;
@@ -218,6 +326,7 @@
         padding-left:22px;
         align-items:center;
         //margin-top:50px;
+        z-index:1000;
         height:70px;
         border-bottom:0.5px solid #e5e5e548;
         div{
@@ -235,30 +344,79 @@
     }
         img{
             width:141px;
-            margin-left:9px;
+            margin-left:28px;
             padding:  22px 14px 18px 16px;
+        }
+    }
+    .categories {
+        padding-left:0px;
+        margin-left:0px;
+        h3{margin-left:10px;
+            margin-top:15px;
+            margin-bottom:10px;
+            font-weight: 500;
+            font-size:18px;
         }
     }
     .subscriptions{
         display:flex;
         flex-direction:column;
+        border-bottom:0.25px solid var(--color-greyLight);
+
         padding:15px 0px;
         padding-left:22px;
         h3{
-            font-size:16px;
-            margin:0 25px 10px;
+            font-size:18px;
+            margin:10px 5px;
+            font-weight:500;
       
+        }
+        
+        .subscription-img{
+            border-radius:50%;
+            width:30px;
         }
         .category{
             width:100%;
             display:flex;
-            padding:12.5px 25px;
+            align-items:center;
+            //justify-content: center;
+            padding:12.5px 10px;
             
             &:hover{
                 background-color:var(--color-greyLight);
             }
-            i{
+            .subscription-name{
+                font-size:18px;
+                margin-top:2px;
+                margin-left:30px;
+                margin-right:10px;
+                align-self:center;
+            }
+            .category-name{
+                font-size:18px;
+                margin-top:0px;
+                margin-left:10px;
+                margin-right:8px;
+                align-self:center;
+            }
+            svg{//ill:white;
+                font-size:10px;
+                width:20px;
                 margin-right:25px;
+                g{
+                    width:10px;
+                path{font-size:10px;
+                    //fill:white;
+                    width:5%;
+                }
+            }
+            }
+            
+            .category-name{
+                margin-top:10px;
+                margin-right:10px;
+                align-self:center;
             }
         }
     }
@@ -277,12 +435,17 @@
     .category{
         width:100%;
         display:flex;
-        padding:12.5px 25px;
+        padding:12.5px 10px;
         &:hover{
             background-color:var(--color-greyLight);
         }
-        i{
-            margin-right:25px;
+        svg{
+            margin-right:32px;
+        }
+        .category-name{
+            font-size:17px;
+            margin-top:5px;
+           
         }
     }
 
@@ -375,6 +538,9 @@
                padding:9px 2px;
                 background-color:#373737;
                 border-radius:40px;
+                &:hover{
+                    background-color:rgba(255, 255, 255, 0.15);
+                }
                 yt-formatted-string{
                     padding:5px 10px;
                     font-size:18px;

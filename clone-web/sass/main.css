@@ -2,7 +2,7 @@
 :root {
   --color-grey:#e5e5e5;
   --color-bg:black;
-  --color-greyLight:#e5e5e5a8;
+  --color-greyLight:#616161dc;
 }
 
 * {
@@ -17,6 +17,7 @@ i {
 }
 
 .nav-bar {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,8 +92,6 @@ i {
   position: sticky;
   background-color: #292929;
   top: 0;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.363);
 }
 
 .nav-bar .mainBar i {
@@ -170,40 +169,151 @@ i {
   width: 750px;
 }
 
-.nav-bar .mainBar .searchbar button {
+.nav-bar .mainBar .searchbar #search-icon {
   margin-top: 0px;
   height: 36.9px;
   width: 70px;
+  padding: 5px;
   background-color: #303030;
 }
 
-.nav-bar .mainBar .searchbar button yt-icon svg {
-  padding: 0px 23px;
-  fill: #ffffff80;
+.nav-bar .mainBar .searchbar #search-icon:hover {
+  fill: rgba(255, 255, 255, 0.568);
+}
+
+.nav-bar .mainBar .searchbar #search-icon yt-icon {
+  width: 10%;
+}
+
+.nav-bar .mainBar .searchbar #search-icon yt-icon a {
+  width: 5px;
+  padding: 10px;
+}
+
+.nav-bar .mainBar .searchbar #search-icon yt-icon a:hover {
+  fill: rgba(255, 255, 255, 0.726);
+}
+
+.nav-bar .mainBar .searchbar #search-icon yt-icon a svg {
+  padding: 10px 23px;
+  fill: #6f6f6f;
 }
 
 .nav-bar .mainBar .searchbar .voice-button {
   background-color: transparent;
-  width: 75px;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
 }
 
 .nav-bar .mainBar .searchbar .voice-button yt-icon {
-  width: 50%;
+  width: 20%;
 }
 
 .nav-bar .mainBar .searchbar .voice-button yt-icon svg {
   fill: white;
+  width: 50%;
+}
+
+.nav-bar .mainBar .searchbar .voice-button .tooltiptext {
+  visibility: hidden;
+  width: 170px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 10px 0;
+  font-size: 15px;
+  /* Position the tooltip */
+  position: absolute;
+  top: 200%;
+  left: 70%;
+  background-color: #616161dc;
+  margin-left: -100px;
+}
+
+.nav-bar .mainBar .searchbar .voice-button:hover .tooltiptext {
+  visibility: visible;
+  z-index: 100;
 }
 
 .nav-bar .mainBar .iconsRight {
+  width: 26%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 24px;
+  margin-right: 25px;
   height: 100%;
 }
 
+.nav-bar .mainBar .iconsRight .lefticons-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-bar .mainBar .iconsRight .create-button .tooltiptext {
+  visibility: hidden;
+  width: 150%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 15px;
+  /* Position the tooltip */
+  position: absolute;
+  top: 120%;
+  left: 190%;
+  background-color: #616161dc;
+  margin-left: -100px;
+}
+
+.nav-bar .mainBar .iconsRight .apps-button .tooltiptext {
+  visibility: hidden;
+  width: 250%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 15px;
+  /* Position the tooltip */
+  position: absolute;
+  top: 120%;
+  left: 140%;
+  background-color: #616161dc;
+  margin-left: -100px;
+}
+
+.nav-bar .mainBar .iconsRight .notifications-button .tooltiptext {
+  visibility: hidden;
+  width: 250%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 15px;
+  /* Position the tooltip */
+  position: absolute;
+  top: 120%;
+  left: 140%;
+  background-color: #616161dc;
+  margin-left: -100px;
+}
+
+.nav-bar .mainBar .iconsRight .lefticons-button:hover .tooltiptext {
+  visibility: visible;
+  z-index: 100;
+}
+
 .nav-bar .mainBar .iconsRight .profile-button img {
+  margin-top: 3px;
   border-radius: 50%;
 }
 
@@ -237,7 +347,6 @@ i {
   color: white;
   overflow-y: scroll;
   position: fixed;
-  z-index: -1;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -255,6 +364,7 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1000;
   height: 70px;
   border-bottom: 0.5px solid #e5e5e548;
 }
@@ -281,8 +391,21 @@ i {
 
 .lateralMenu .lat-logo img {
   width: 141px;
-  margin-left: 9px;
+  margin-left: 28px;
   padding: 22px 14px 18px 16px;
+}
+
+.lateralMenu .categories {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.lateralMenu .categories h3 {
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .lateralMenu .subscriptions {
@@ -293,13 +416,20 @@ i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-bottom: 0.25px solid var(--color-greyLight);
   padding: 15px 0px;
   padding-left: 22px;
 }
 
 .lateralMenu .subscriptions h3 {
-  font-size: 16px;
-  margin: 0 25px 10px;
+  font-size: 18px;
+  margin: 10px 5px;
+  font-weight: 500;
+}
+
+.lateralMenu .subscriptions .subscription-img {
+  border-radius: 50%;
+  width: 30px;
 }
 
 .lateralMenu .subscriptions .category {
@@ -307,15 +437,57 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 12.5px 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12.5px 10px;
 }
 
 .lateralMenu .subscriptions .category:hover {
   background-color: var(--color-greyLight);
 }
 
-.lateralMenu .subscriptions .category i {
+.lateralMenu .subscriptions .category .subscription-name {
+  font-size: 18px;
+  margin-top: 2px;
+  margin-left: 30px;
+  margin-right: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.lateralMenu .subscriptions .category .category-name {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 8px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.lateralMenu .subscriptions .category svg {
+  font-size: 10px;
+  width: 20px;
   margin-right: 25px;
+}
+
+.lateralMenu .subscriptions .category svg g {
+  width: 10px;
+}
+
+.lateralMenu .subscriptions .category svg g path {
+  font-size: 10px;
+  width: 5%;
+}
+
+.lateralMenu .subscriptions .category .category-name {
+  margin-top: 10px;
+  margin-right: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .lateralMenu .first-cat {
@@ -339,15 +511,20 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 12.5px 25px;
+  padding: 12.5px 10px;
 }
 
 .lateralMenu .categories .category:hover {
   background-color: var(--color-greyLight);
 }
 
-.lateralMenu .categories .category i {
-  margin-right: 25px;
+.lateralMenu .categories .category svg {
+  margin-right: 32px;
+}
+
+.lateralMenu .categories .category .category-name {
+  font-size: 17px;
+  margin-top: 5px;
 }
 
 .lateralMenu .lat-logo {
@@ -465,6 +642,10 @@ i {
   padding: 9px 2px;
   background-color: #373737;
   border-radius: 40px;
+}
+
+.videos #scroll-container iron-selector yt-chip-cloud-chip-renderer:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .videos #scroll-container iron-selector yt-chip-cloud-chip-renderer yt-formatted-string {
