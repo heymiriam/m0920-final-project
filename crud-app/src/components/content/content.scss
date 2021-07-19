@@ -1,0 +1,50 @@
+.content{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+
+.card{
+    margin-top:40px;
+    margin-bottom:40px;
+    width:90%;
+    height:300px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    
+    .cardimg{
+        width:60%;
+    }
+    .heading-cont{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+
+        
+        .card-heading{
+            font-weight:550;
+            margin-top:20px;
+        }
+        .card-btn{
+            display:flex;
+            align-items: center;
+            margin-top:15px;
+            align-self: center;
+        }
+
+    }
+    
+    .rate{
+        display:flex;
+        flex-direction:column;
+        margin:20px 0;
+        padding:0;
+       /* .rate-heading{
+            display:inline;
+            width:20%;
+            padding-bottom:8px;
+        }*/
+       
+    }
+}
+}
