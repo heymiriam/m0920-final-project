@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -18,6 +19,10 @@ import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfie
 import Rating from '@material-ui/lab/Rating';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import './modal.scss'; 
+import axios from 'axios';
+
+
+const baseUrl='http://localhost:3000/movies/'
 
 const StyledRating = withStyles({
   iconFilled: {
@@ -50,6 +55,8 @@ const customIcons = {
     label: 'Very Satisfied',
   },
 };
+
+
 
 function IconContainer(props) {
   const { value, ...other } = props;
@@ -92,11 +99,21 @@ const genres = [
 
 
 
-export default function Modal() {
+function Modal() {
+  const [data,setData]=useState([]);
+const getData=async()=>{
+  await axios.get(baseUrl).then(response=>{console.log(response.data);})
+}
+
+useEffect(async()=>{
+  await getData();
+},[])
+
       const [genre, setGenre] = React.useState('Select Movie Genre');
     IconContainer.propTypes = {
       value: PropTypes,
     };
+
     const handleChange = (event) => {
       setGenre(event.target.value);
     };
@@ -109,7 +126,24 @@ export default function Modal() {
     const handleClose = () => {
       setOpen(false);
     };
-  
+    const [movieSelected, setMovieSelected]=useState({
+      movie:'',
+      genre:'',
+      review:'',
+      rating:'',
+    });
+
+    const handleMovieChange = e =>{
+      const {name, value} = e.target;
+      setMovieSelected(prevState => ({
+        ...prevState,
+        [name]: value
+
+      }))
+      
+    }
+
+    
     return (
       <div>
         
@@ -128,17 +162,21 @@ export default function Modal() {
             <TextField
               autoFocus
               margin="dense"
-              id="movie-name"
+              id="movie"
+              name="movie"
               label="Movie Name"
               type="text"
               fullWidth
+              onChange={handleMovieChange}
             />
             <TextField
           id="standard-select-genre"
           select
+          name="genre"
           label="Select"
           value={genre}
           onChange={handleChange}
+          onChange={handleMovieChange}
           helperText="Please select a movie genre"
         >
           {genres.map((option) => (
@@ -147,28 +185,23 @@ export default function Modal() {
             </MenuItem>
           ))}
         </TextField>
-            <TextField
-              autoFocus
-              margin="dense"
-              id="movie-name"
-              label="Movie Name"
-              type="text"
-              fullWidth
-            />
+           
              <TextareaAutosize
               maxRows={10}
+              name="review"
               className="textarea"
               aria-label="maximum height"
               placeholder="Maximum 4 rows"
-              defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua."
+              defaultValue="Write a review"
+              onChange={handleMovieChange}
             />
             <Rating
-          name="customized-icons"
+          name="rating"
           defaultValue={2}
           getLabelText={(value) => customIcons[value].label}
           IconContainerComponent={IconContainer}
           className="rate-icons"
+          onChange={handleMovieChange}
         />
 
           </DialogContent>
@@ -188,3 +221,4 @@ export default function Modal() {
     );
   }
 
+  export default Modal;

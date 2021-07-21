@@ -67,20 +67,21 @@ const StyledRating = withStyles({
 function Content(){
 return(
     <div className="content">
-    <Card className="card">
+    <Card className="card" key={movies.id}>
       <CardMedia
         className="cardimg"
         component="img"
         alt="Space Jam: New Legacy"
         height="300"
-        src={MovieImg}
+        //src={MovieImg}
+        src={movies.img}
         title="Space Jam: New Legacy"
       />
 
       <CardContent>
       <div className="heading-cont">
         <Typography align="left" gutterBottom variant="h4" component="div" className="card-heading">
-        Space Jam: A New Legacy
+        {movies.movie}
         </Typography>
         <CardActions className="card-btn">
             <IconButton aria-label="edit" color="primary">
@@ -100,11 +101,11 @@ return(
           getLabelText={(value) => customIcons[value].label}
           IconContainerComponent={IconContainer}
           className="rate-icons"
-        />
+        >{movies.rating}</Rating>
       </Box>
         
         <Typography align="left" variant="body1" color="text.secondary">
-        Younger audiences will still find plenty to enjoy about Space Jam: A New Legacy, but LeBron James' trip to Tune World feels like it learned all the wrong lessons from the original film.
+        {movies.review}
         </Typography>
       </CardContent>
      
