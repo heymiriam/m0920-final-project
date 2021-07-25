@@ -109,6 +109,8 @@ const Hero=({
         //handleClickOpen={handleClickOpen}
         //handleChange={handleChange}
         ></Modal>
+        <br></br>
+        <br></br>
         <MovieGenreFilter query={query} handleQueryChange={handleQueryChange}/>
      </Parallax>
     )
