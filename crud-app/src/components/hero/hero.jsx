@@ -4,7 +4,15 @@ import Modal from './modal.jsx';
 import LazyHero from 'react-lazy-hero';
 import { Parallax, Background } from 'react-parallax';
 import "./hero.scss";
+import MovieGenreFilter from './movieGenreFilter';
 import Logo from '../../assets/crud-logo-02.png';
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
+import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
+import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
+import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
+import PropTypes from 'prop-types';
+
 
 
 /*const Container = () => (
@@ -12,15 +20,96 @@ import Logo from '../../assets/crud-logo-02.png';
         Content goes here. Parallax height grows with content height.
     </Parallax>
 );*/
-function Hero() {
-    
+const customIcons = {
+  1: {
+    icon: <SentimentVeryDissatisfiedIcon />,
+    label: 'Very Dissatisfied',
+  },
+  2: {
+    icon: <SentimentDissatisfiedIcon />,
+    label: 'Dissatisfied',
+  },
+  3: {
+    icon: <SentimentSatisfiedIcon />,
+    label: 'Neutral',
+  },
+  4: {
+    icon: <SentimentSatisfiedAltIcon />,
+    label: 'Satisfied',
+  },
+  5: {
+    icon: <SentimentVerySatisfiedIcon />,
+    label: 'Very Satisfied',
+  },
+};
+
+function IconContainer(props) {
+  const { value, ...other } = props;
+  return <span {...other}>{customIcons[value].icon}</span>;
+}
+const Hero=({
+  query,
+  handleQueryChange,
+  movie,
+  setMovie,
+  genreType,
+  setGenreType,
+  review,
+  setReview,
+  rating,
+  setRating,
+  movieImg,
+  setMovieImg,
+  isEdit,
+  clearInput,
+  handleAddOrEdit,
+  open,
+  isOpen,
+
+}) =>{
+  
+  
+  
+  //const [open, setOpen] = React.useState(false);
+
+  /*const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };*/
+
+  //const [genre, setGenre] = React.useState('Select Movie Genre');
+  IconContainer.propTypes = {
+    value: PropTypes,
+  };
+
   
     return (
         <Parallax style={{height:500, }} bgImage={HeroImg} bgImageAlt="the cat" strength={200} className="hero">
        
         <img src={Logo} className="logoHero"></img>
-        <Modal></Modal>
-        
+        <Modal
+        movie={movie}
+        setMovie={setMovie}
+        genreType={genreType}
+        setGenreType={setGenreType}
+        rating={rating}
+        setRating={setRating}
+        movieImg={movieImg}
+        setMovieImg={movieImg}
+        review={review}
+        setReview={setReview}
+        isEdit={isEdit}
+       // handleInputChange={handleInputChange}
+        //handleClear={handleClear}
+        clearInput={clearInput}
+        handleAddOrEdit={handleAddOrEdit}
+        //handleClickOpen={handleClickOpen}
+        //handleChange={handleChange}
+        ></Modal>
+        <MovieGenreFilter query={query} handleQueryChange={handleQueryChange}/>
      </Parallax>
     )
   };

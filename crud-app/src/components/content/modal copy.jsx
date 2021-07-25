@@ -140,28 +140,6 @@ const Modal=({
     
   }*/
   return(
-    /* <input
-                        type="text"
-                        margin="normal"
-                        fullwidth
-                        id="movieImg"
-                        label="Image"
-                        name="movieImg"
-                        value={movieImg}
-                        className="my-1 p-1 w-full"
-                        placeholder="Image"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        onChange={(e)=>setMovieImg(e.target.value)}*/
-                        /*onChange={ (e) => {
-                          //handleChange(e);
-                          handleInputChange();
-                          }} */
-                        /*//onChange={handleChange}
-                        //onChange={handleInputChange}
-                        //required
-                        />  */
     <div>
       <Button  style={{backgroundColor: '#910101', color: '#FFFFFF'}} onClick={ (e) => {
             //handleAddOrEdit(e);
@@ -194,23 +172,28 @@ const Modal=({
                 }} */
                 onChange={(e)=>setMovie(e.target.value)}
             />
-            <TextField
-              autoFocus
-              margin="dense"
-              id="movieimg"
-              value={movieImg}
-              name="movie img"
-              label="Movie Img"
-              type="url"
-              fullWidth
-              //onChange={handleInputChange}
-             /* onChange={ (e) => {
-                handleChange(e);
-                handleInputChange();
-                }} */
-                onChange={(e)=>setMovieImg(e.target.value)}
-            />
-           
+            <input
+                        type="url"
+                        margin="normal"
+                        fullwidth
+                        id="img"
+                        label="Image"
+                        name="movieImg"
+                        value={movieImg}
+                        className="my-1 p-1 w-full"
+                        placeholder="Image"
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                        onChange={(e)=>setMovieImg(e.target.value)}
+                        /*onChange={ (e) => {
+                          //handleChange(e);
+                          handleInputChange();
+                          }} */
+                        //onChange={handleChange}
+                        //onChange={handleInputChange}
+                        //required
+                    /> 
             <TextField
           id="standard-select-genre"
           select

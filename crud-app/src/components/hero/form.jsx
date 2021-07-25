@@ -85,7 +85,7 @@ const genres = [
     label: 'Thriller',
   },
 ];
-const Modal=({
+const Form=({
   isEdit,
   movie,
   setMovie,
@@ -120,7 +120,7 @@ const Modal=({
  /* const handleChange = (event) => {
     setGenre(event.target.value);
   };*/
-  const [open, setOpen] = React.useState(false);
+  /*const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -128,7 +128,7 @@ const Modal=({
 
   const handleClose = () => {
     setOpen(false);
-  };
+  };*/
 
   /*const handleGenreChange = e =>{
     const {name, value} = e.target;
@@ -163,17 +163,10 @@ const Modal=({
                         //required
                         />  */
     <div>
-      <Button  style={{backgroundColor: '#910101', color: '#FFFFFF'}} onClick={ (e) => {
-            //handleAddOrEdit(e);
-            handleClickOpen(e);
-            }} >
-          Add a movie
-        </Button>
-        <Dialog open={open} onClose={handleClose} fullWidth={true} aria-labelledby="form-dialog-title" className="dialog">
-          <DialogTitle id="form-dialog-title">Movie</DialogTitle>
+      
           
           <form>
-            <DialogContent>
+           
             <DialogContentText>
               Add or Edit a movie
             </DialogContentText>
@@ -199,7 +192,7 @@ const Modal=({
               margin="dense"
               id="movieimg"
               value={movieImg}
-              name="movie img"
+              name="movieImg"
               label="Movie Img"
               type="url"
               fullWidth
@@ -212,7 +205,7 @@ const Modal=({
             />
            
             <TextField
-          id="standard-select-genre"
+          id="genreType"
           select
           name="genreType"
           label="Select"
@@ -231,6 +224,7 @@ const Modal=({
            
              <TextareaAutosize
               maxRows={10}
+              id="review"
               name="review"
               value={review}
               className="textarea"
@@ -242,6 +236,7 @@ const Modal=({
             />
             <Rating
           name="rating"
+          id="rating"
           defaultValue={2}
           getLabelText={(value) => customIcons[value].label}
           IconContainerComponent={IconContainer}
@@ -251,24 +246,23 @@ const Modal=({
           //onChange={handleInputChange}
         />
 
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose}  color="secondary">
-              Cancel
+          
+      
+            <Button onClick={clearInput}  color="secondary">
+              Clear
             </Button>
             <Button 
-             onClick={ (e) => {
+             /*onClick={ (e) => {
               handleClose();
                 handleAddOrEdit();
-                }}
-            //onClick={handleAddOrEdit}  
+                }}*/
+            onClick={handleAddOrEdit}  
             color="primary">
               {buttonContent}
             </Button>
-            
-          </DialogActions>
+          
           </form>
-        </Dialog>
+        
         
     </div>
   )
@@ -420,4 +414,4 @@ useEffect(async()=>{
     );
   }*/
 
-  export default Modal;
+  export default Form;
