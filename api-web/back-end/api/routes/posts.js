@@ -20,17 +20,18 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
     try{
         const post=  await Post.findById(req.params.id);
+
         if(post.username===req.body.username){
             try{
                 const updatedPost = await Post.findByIdAndUpdate(req.params.id,{
-                    $set:req.body
+                    $set:req.body,
                 },{new:true});
-                res.status(200).json(updatedPost)
+                res.status(200).json(updatedPost);
             }catch(err){
                 res.status(500).json(err);
             }
             }else{
-                rens.status(401).json("You can only update your own post")
+                res.status(401).json("You can only update your own post");
            }
     }catch(err){
         res.status(500).json(err);
@@ -43,13 +44,13 @@ router.delete("/:id", async (req, res) => {
         const post=  await Post.findById(req.params.id);
         if(post.username===req.body.username){
             try{
-                await post.delete()
+                await post.delete();
                 res.status(200).json("Post has been deleted")
             }catch(err){
                 res.status(500).json(err);
             }
             }else{
-                rens.status(401).json("You can only delete your own post")
+                res.status(401).json("You can only delete your own post")
            }
     }catch(err){
         res.status(500).json(err);
@@ -68,7 +69,7 @@ router.get("/:id", async(req, res)=>{
 })
 
 
-//GET ALL POSTS
+//GET ALL DATA/POSTS
 router.get("/", async(req, res)=>{
     const username=req.query.user;
     const catName=req.query.cat;
@@ -77,11 +78,11 @@ router.get("/", async(req, res)=>{
         if(username){
             posts=await Post.find({username})
         }else if(catName){
-            post=await Post.find({categories:{
+            posts=await Post.find({categories:{
                 $in:[catName]
             }})
         }else{
-            posts = Post.find();
+            posts = await Post.find();
         }
         res.status(200).json(posts);
     }catch(err){

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,OAAO,EAAC,IAAI;EACZ,WAAW,EAAC,IAAI;EAChB,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAStB;;AAdD,AAOI,UAPM,CAON,kBAAkB,CAAA;EACd,aAAa,EAAC,IAAI;EAClB,UAAU,EAAC,MAAM;EACjB,WAAW,EAAC,GAAG;CAClB",
+    "sources": [
+        "WritePost.scss"
+    ],
+    "names": [],
+    "file": "WritePost.css"
+}
