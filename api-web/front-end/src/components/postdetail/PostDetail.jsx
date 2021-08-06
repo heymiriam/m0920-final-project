@@ -1,24 +1,38 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Chip from '@material-ui/core/Chip';
+import { useHistory, useLocation} from "react-router-dom";
+import axios from "axios";
 
 function PostDetail() {
+    const location=useLocation();
+    const path=location.pathname.split("/")[2];
+    const [post, setPost]=useState({})
+    useEffect(() => {
+        const fecthPost =async ()=>{
+            const res = await axios.get("/posts/"+ path);
+            setPost(res.data)
+        };
+        fecthPost();
+    },[path]);
     return (
         <div className="postdetail">
-            <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=828&q=80" />
-        <h1 className="postdetail-heading">Post entry</h1>  
+            {post.photo &&
+            <img src={post.photo} alt=""/>
+            }
+        <h1 className="postdetail-heading">{post.title}</h1>  
         <EditIcon />
         <DeleteIcon />
        <Chip></Chip>
        <div className="post-content">
            <div className="author">
-
+            {post.username}
            </div>
            <div className="postedtime">
-
+            <p>{new Date(post.createdAt).toDateString()}</p>
            </div>
-           <div className="post-text"></div>
+           <div className="post-text">{post.desc}</div>
        </div>
         </div>
     )

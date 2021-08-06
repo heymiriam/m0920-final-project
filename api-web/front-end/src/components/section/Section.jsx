@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Section.scss';
+import axios from 'axios';
 
 function Section(){
+    const [category, setCategory]=useState([]);
+
+    useEffect(()=>{
+        const fetchCats=async()=>{
+            const res = await axios.get("/categories")
+            setCategory(res.data)
+        }
+        fetchCats();
+    },[])
     return(
         <div className="section">
             <div className="section-item">
@@ -13,11 +23,9 @@ function Section(){
             <div className="section-item">
                 <p className="section-heading">Categories</p>
                 <ul className="category-list">
-                    <li className="category-item">Sports</li>
-                    <li className="category-item">Random</li>
-                    <li className="category-item">Food</li>
-                    <li className="category-item">Film</li>
-                    <li className="category-item">Travel</li>
+                    {category.map(c=>(
+                        <li className="category-item">{c.name}</li>
+                    ))}
 
                 </ul>
             </div>

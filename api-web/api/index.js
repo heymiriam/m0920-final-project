@@ -16,7 +16,7 @@ app.use(express.json());
 
 
 mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true,
+    useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true
 }).then(console.log("connect to MongoDB")).catch((err) => console.log(err));
 
 const storage=multer.diskStorage({
