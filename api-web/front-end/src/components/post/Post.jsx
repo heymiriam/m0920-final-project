@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Post.scss';
 import Chip from '@material-ui/core/Chip';
 import {Link} from "react-router-dom";
@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 
 
 export default function Post({post}){
+    const publicFolder="http://localhost:5000/assets/";
     return(
 
         <Card className="post">
@@ -20,9 +21,7 @@ export default function Post({post}){
           <CardActionArea> 
           
           <div className="post-img">
-              {post.photo && (
-              <img className="post-img" src={post.photo} alt=""/>
-              )}
+          {post.photo && <img className="img" src={publicFolder + post.photo} alt=""/>}
               <div>
                   {
                       post.categories.map((ca)=>{

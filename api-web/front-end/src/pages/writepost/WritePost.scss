@@ -1,15 +1,41 @@
+.img-upload{
+    width:100%;
+    object-fit: cover;
+    height:400px;
+}
 .writepost{
     display:flex;
-    padding-top:24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
+    
     .writepost-heading{
+        margin-top:50px;
         margin-bottom:60px;
         text-align:center;
-        font-weighT:500;
+        font-weight:500;
     }
-   
+   .write-form{
+       width:60%;
+       .post-title{
+           width:100%;
+       }
+       .upload-btn{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    .cat-container{
+        width:100%;
+        .categories{
+            width:30%;
+        }
+    }
+    .textarea{
+        margin-top:40px;
+        margin-bottom:60px;
+        width:100%;
+    }
+   }
     
 }

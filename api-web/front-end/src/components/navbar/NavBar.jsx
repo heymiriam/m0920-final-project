@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import './NavBar.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import {Link} from 'react-router-dom';
+import { Context } from "../../context/Context";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,7 +15,13 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 function NavBar(){
-const user=false;
+//const user=true;
+
+const {user,dispatch}=useContext(Context);
+const publicFolder = "http://localhost:5000/assets/"
+ const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
 const classes = useStyles();
 return(
     <div className="navbar">
@@ -31,13 +38,13 @@ return(
         <div className="icons" >
             <SearchIcon ></SearchIcon>
             <Button variant="contained" color="primary" className="btn">
-            <Link to="/write" style={{textDecoration:'none', color:'white'}}><Link to="/write" style={{textDecoration:'none', color:'white'}}>Post</Link></Link>
+            <Link to="/write" style={{textDecoration:'none', color:'white'}}>Post</Link>
             </Button>
             
-                {user && <Button variant="contained" color="secondary" className="btn">Logout </Button>}
+            {user && <Button variant="contained" color="secondary" className="btn" onClick={handleLogout}>LOGOUT</Button>} 
            
             {user ?
-            (<img className="profile-img" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"></img>
+            (<img className="profile-img" src={publicFolder + user.profilePicture}></img>
             ) : ( <>
             
             <Button className="btn login-btn" color="primary"><Link to="/login" style={{textDecoration:'none', color:'blue'}}>Login</Link></Button>

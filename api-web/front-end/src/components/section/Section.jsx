@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './Section.scss';
 import axios from 'axios';
+import {Link} from "react-router-dom";
+
 
 function Section(){
     const [category, setCategory]=useState([]);
@@ -23,9 +25,13 @@ function Section(){
             <div className="section-item">
                 <p className="section-heading">Categories</p>
                 <ul className="category-list">
+                   
                     {category.map(c=>(
+                         <Link to={`/?=category=${c.name}`}>
                         <li className="category-item">{c.name}</li>
+                        </Link>
                     ))}
+                   
 
                 </ul>
             </div>

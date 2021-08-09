@@ -9,7 +9,7 @@ export default function Posts({posts}){
             <h1 className="posts-heading">Posts</h1>
             <div className="container">
                 {posts.map(p=> (
-                    <Post post={p}/>
+                    <Post post={p} className="post-container"/>
 
                     ))}
             </div> 
