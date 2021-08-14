@@ -1,0 +1,13 @@
+.link{
+    text-decoration:none;
+    color:black;
+}
+.contactbtn{
+    cursor:pointer;
+    transition:5s;
+    text-decoration:none;
+    color:black;
+    &:hover{
+        transform:translateY(-2px);
+    }
+}
