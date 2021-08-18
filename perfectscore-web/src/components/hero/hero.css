@@ -1,0 +1,149 @@
+.hero {
+  height: 100vh;
+  max-height: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .wrapper .heroslider {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.hero .wrapper .heroslider::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  bottom: 0vh;
+  left: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.hero .wrapper .heroslider .heroslide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero .wrapper .heroslider .heroslide .heroimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero .wrapper .heroslider .heroslide .herocont {
+  position: relative;
+  z-index: 8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 1600px;
+  width: calc(100% -100px);
+  color: #fff;
+}
+
+.hero .wrapper .heroslider .heroslide .herocont .title {
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+}
+
+.hero .wrapper .heroslider .heroslide .herocont .price {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero .wrapper .heroslider .heroslide .herocont .btn {
+  background-color: #000d1a;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-decoration: none;
+  color: black;
+}
+
+.hero .wrapper .heroslider .heroslide .herocont .btn:hover {
+  color: black;
+  background-color: #cd853f;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.hero .wrapper .heroslider .heroslide .slidebtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10000;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 120px;
+}
+
+.hero .wrapper .heroslider .heroslide .slidebtn .arrowbtn {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000d1a;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 10000;
+}
+
+.hero .wrapper .heroslider .heroslide .slidebtn .arrowbtn:hover {
+  background: #cd853f;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+/*# sourceMappingURL=hero.css.map */

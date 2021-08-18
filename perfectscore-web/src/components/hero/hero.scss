@@ -1,0 +1,115 @@
+.hero{
+    height:100vh;
+    max-height:1000px;
+    position: relative;
+    overflow: hidden;
+
+    .wrapper{
+        width:100%;
+        height:100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow:hidden;
+        .heroslider{
+            z-index: 1;
+            height:100%;
+            width:100%;
+            &::before{
+                content:"";
+                position: absolute;
+                z-index:3;
+                width:100%;
+                height:100vh;
+                bottom:0vh;
+                left:0;
+                overflow:hidden;
+                opacity: 0.5;
+                background:linear-gradient(0deg, rgba(0,0,0,0.2)0%,rgba(0,0,0,0.2)50%,rgba(0,0,0,0.5)100%)
+
+            }
+            .heroslide{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                .heroimg{
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    z-index:-100;
+                    object-fit: cover;
+                    width:100vw;
+                    height:100vh;
+                }
+                .herocont{
+                    position:relative;
+                    z-index:8;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    max-width:1600px;
+                    width:calc(100% -100px);
+                    color:#fff;
+                    .title{
+                        margin-bottom:10px;
+                        text-shadow:0px 0px 20px rgba(0,0,0,0.4);
+                        font-weight: 500;
+
+                    }
+                    .price{
+                        margin-top:0px;
+                        margin-bottom:20px;
+                        text-shadow:0px 0px 20px rgba(0,0,0,0.4);
+                    }
+                    .btn{
+                        background-color:#000d1a;
+                        color:white;
+                        cursor:pointer;
+                        transition:.5s;
+                        text-decoration:none;
+                        color:black;
+                        &:hover{
+                            color:black;
+                            background-color: #cd853f;
+                           // transform:translateY(-2px);
+                            transform:scale(1.05);
+                        }
+            
+                    }
+                }
+                
+                .slidebtn{
+                        display:flex;
+                        justify-content:space-between;
+                        z-index:10000;
+                        position:absolute;
+                        bottom:50px;
+                        right:50px;
+                        width:120px;
+                    .arrowbtn{
+                        width:50px;
+                        height:50px;
+                        color:#fff;
+                        cursor:pointer;
+                        background-color:#000d1a;
+                        transition:.3s;
+                        z-index:10000;
+                        
+                        &:hover{
+                            background:#cd853f ;
+                            transform: scale(1.05);
+                        }
+                    }
+            }
+        
+        }
+        }
+        
+    }
+}
